@@ -1,0 +1,28 @@
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '670241086350289',
+      status     : false,
+      xfbml      : true
+    });
+  };
+
+  (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="colors" ng-controller="MobileController">
+  <div class="row" ng-click="choose($index)" ng-repeat="color in colors" style="background-color: #{{ color }}"></div>
+
+  <div ng-if="player" class="player" ng-click="ready()" style="top: {{ 20 * player.color }}%;">
+    <img src="http://graph.facebook.com/{{ player.id }}/picture?width=200&height=200" />
+    <div ng-if="player.ready" class="ready" style="top: {{ 20 * player.color }}%;">Ready</div>
+  </div>
+
+  <button ng-hide="player" ng-click="login()">Facebook Login</button>
+</div>

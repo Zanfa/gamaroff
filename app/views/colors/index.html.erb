@@ -1,0 +1,10 @@
+<div class="colors" ng-controller="ColorsController">
+  <div class="row" ng-repeat="color in colors" style="background-color: #{{ color }}"></div>
+  <div class="player" ng-repeat="player in players" style="top: {{ 20 * player.color }}%;">
+    <img src="http://graph.facebook.com/{{ player.id }}/picture?width=200&height=200" />
+    <div ng-if="player.ready" class="ready" style="top: {{ 20 * player.color }}%;">Ready</div>
+  </div>
+  <div ng-class="{slideshow: true, visible: slideShowRunning}" style="background-color: #{{ colors[players[activePlayer].color] }};">
+    <h1>{{ players[activePlayer].name }}</h1>
+  </div>
+</div>

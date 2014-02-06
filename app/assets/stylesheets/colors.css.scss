@@ -1,0 +1,60 @@
+// Place all the styles related to the colors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.colors {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .row {
+    height: 20%;
+
+    &:nth-child(odd) {
+      background: black;
+    }
+  }
+
+  .player {
+    top: 0;
+    left: 0;
+    height: 20%;
+    position: absolute;
+    background: blue;
+
+    -webkit-transition: 0.5s linear all;
+    -moz-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+
+    img {
+      height: 100%;
+    }
+
+    .ready {
+      position: absolute;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 10%;
+  }
+
+  .slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    transition: 1s linear all;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}
