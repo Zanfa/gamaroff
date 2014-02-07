@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require pubnub-angular
+//= require jquery
 //= require_tree .

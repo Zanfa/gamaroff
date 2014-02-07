@@ -15,16 +15,22 @@
     }
   }
 
+  .players {
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   .player {
     top: 0;
     left: 0;
     height: 20%;
     position: absolute;
-    background: blue;
-
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    transition: 0.5s linear all;
+    background: transparent;
 
     img {
       height: 100%;
@@ -32,6 +38,13 @@
 
     .ready {
       position: absolute;
+    }
+
+    &.center {
+      margin: 0 auto;
+      width: 100px;
+      left: 0;
+      right: 0;
     }
   }
 
@@ -57,4 +70,10 @@
       opacity: 1;
     }
   }
+}
+
+.animated {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  transition: 1s linear all;
 }

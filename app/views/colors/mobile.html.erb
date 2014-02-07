@@ -19,7 +19,7 @@
 <div class="colors" ng-controller="MobileController">
   <div class="row" ng-click="choose($index)" ng-repeat="color in colors" style="background-color: #{{ color }}"></div>
 
-  <div ng-if="player" class="player" ng-click="ready()" style="top: {{ 20 * player.color }}%;">
+  <div draggable ng-if="player" class="player center" ng-click="ready()" style="top: {{ 20 * player.color }}%;">
     <img src="http://graph.facebook.com/{{ player.id }}/picture?width=200&height=200" />
     <div ng-if="player.ready" class="ready" style="top: {{ 20 * player.color }}%;">Ready</div>
   </div>
