@@ -15,6 +15,6 @@
 /log/*.log
 /tmp
 
-vendor/
+vendor/bundle
 *.swp
 *.swo
